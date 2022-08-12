@@ -6,9 +6,15 @@
 <script src = "faker.min.js" type = "text/javascript"></script> 
  
 <!-- user interface -->
+
+<style> 
+    body {
+        background-color: rgb(40, 183, 226);
+        font-family: 'roboton';
+      }</style>
 <body>  
     <div style="padding:50px">
-        <button type="button" class="btn btn-primary" style="font-size: 3em;" onclick="add()">Add User</button>
+        <button type="button" class="btn btn-secondary" style="font-size: 1.9em;" onclick="add()">Add User</button>
         <div id="status"></div>   
     </div>
     
@@ -71,7 +77,7 @@ function add(){
  
     // post user
     //const url = 'http://104.131.178.189:3001/add';
-    const url = 'http://localhost:3000/add';
+    const url = '/add';
     superagent
         .post(url)
         .send(user)
